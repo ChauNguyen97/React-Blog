@@ -1,3 +1,4 @@
+import Home from "./page/home/Home"
 import TopBar from "./topbar/TopBar"
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
         <
         TopBar / >
         <
-        p > test < /p> < / >
+        Home / > < / >
     );
 }
 
