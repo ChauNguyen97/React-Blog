@@ -16,7 +16,7 @@ function Write() {
             <input type="file" id="fileInput" style={{ display: "none" }} />
             <input
               type="text"
-              placeholder="title"
+              placeholder="Title"
               autoFocus={true}
               className="writeInput"
             />
