@@ -8,16 +8,17 @@ import { Routes, Route} from "react-router-dom";
 import Single from "./page/single/Single";
 
 function App() {
+  const user=false;
   return (
     <>
       <TopBar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/settings" element={<Settings />} />
-        <Route path="/write" element={<Write />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/single" element={<Single/>} />
+        <Route path="/" element={user ? <Home /> : <Login />} />
+        <Route path="/settings" element={user ? <Settings /> : <Login />} />
+        <Route path="/write" element={user ? <Write /> : <Login/>} />
+        <Route path="/login" element={user ? <Home /> : <Login />} />
+        <Route path="/register" element={user ? <Home /> : <Register />} />
+        <Route path="/post/:postId" element={user ? <Single /> : <Login/>} />
       </Routes>
     </>
   );
