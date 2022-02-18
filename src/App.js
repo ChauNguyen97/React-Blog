@@ -5,6 +5,7 @@ import Settings from "./page/settings/Settings";
 import Login from "./page/login/Login";
 import Register from "./page/register/Register";
 import { Routes, Route} from "react-router-dom";
+import Single from "./page/single/Single";
 
 function App() {
   return (
@@ -12,14 +13,11 @@ function App() {
       <TopBar />
       <Routes>
         <Route path="/" element={<Home />} />
-
         <Route path="/settings" element={<Settings />} />
-
         <Route path="/write" element={<Write />} />
-
         <Route path="/login" element={<Login />} />
-
         <Route path="/register" element={<Register />} />
+        <Route path="/single" element={<Single/>} />
       </Routes>
     </>
   );
